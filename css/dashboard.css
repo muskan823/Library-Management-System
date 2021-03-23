@@ -1,0 +1,611 @@
+/*................................NAV.........*/
+  
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ body{
+
+    /* background-image: linear-gradient(to bottom,rgb(82, 180, 236) ,rgb(200, 235, 232)); */
+    background-color: rgba(5, 10, 56, 0.938);
+} 
+nav{
+    width:100%;
+    height:12%;
+    padding-top:1%;
+    display:flex;
+    background-color: black;
+    z-index: 2;
+}
+.logo{
+    width: 8%;
+    height:90%;
+    margin-bottom:4%;
+}
+img{
+    width:100%;
+    height:100%;
+}
+.lo-head{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0.5%;
+    padding-left:2%;
+    color: white;
+    padding-right: 4%;
+    
+}
+nav>ul{
+    width: 30%;
+    margin-top: 1%;
+    padding-left: 0;
+}
+nav>ul>li{
+    border-radius:20px;
+    display: inline;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    list-style: none;
+    margin-right: 2%;
+    color: white;
+    padding: 1.5%;
+    border: 1px solid white;
+}
+nav>ul>li:hover{
+    border:1px solid yellow;
+    color: yellow;
+    cursor: pointer;
+}
+#search{
+    margin-top:0.7%;
+    width:25%;
+    height:55%;
+    font-size: large;
+    padding-left: 1%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+.search{
+    width:12%;
+    height:55%;
+    margin-top:0.7%;
+    margin-left:1%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(17, 212, 17, 0.644);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right,rgba(17, 212, 17, 0.644),rgba(99, 247, 99, 0.678));
+}
+
+/*......................oporation..............................................................................*/
+
+.oporation{
+    width: 50%;
+    height:30%;
+    display: flex;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1%;
+    position: relative;
+    
+    /*background-color: rgba(36, 35, 35, 0.932);*/
+
+}
+/*.opo-head{
+    font-size:1.6rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+    color: white;
+    
+}
+/*.oporation>ul{
+    height: 100%;
+    width: 60%;
+    padding-left: 0;
+    margin-left: 4%;
+    position: absolute;
+    right: 0;
+    padding-left: 10%;
+}*/
+.oporation>.li{
+    height: 80%;
+    width: 30%;
+    display: flexbox;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 4%;
+    margin-left:1%;
+    margin-right:1%;
+    margin-top: 2%;
+    padding: 0.5%;
+    color: black; 
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right,orange,yellow);
+}
+/* .oporation>.li::nth-child(1){
+    margin-left: 10%;
+} */
+.font{
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    font-size: 5rem;
+}
+.oporation>.li:hover{
+    /* height:85%;
+    width:25%; */
+    background-image: linear-gradient(to right,black,black);
+    color:white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sub-list{
+    width: 20%;
+    display:none;
+    margin-left:50%;
+    font-family: sans-serif;
+    font-size: 1rem;
+    border: 1px solid black;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color:rgba(0,0,0,0.9);
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+.sub-list > ul > li:hover{
+    color: yellow;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+/*..............................modal box................................................*/
+
+/* .....................book reg. modal box.................... */
+
+.modal-1{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    position:absolute;
+    background-color:rgba(0,0,0,0.9);
+    position: -webkit-sticky; /* Safari & IE */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display:none;
+}
+.modal-1-content{
+    width:30%;
+    height:65%;
+    border:1px solid black;
+    display:block;
+    margin-top:10%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+}
+.modal-1-heading{
+    width:100%;
+    height:15%;
+    font-size:1.5rem;
+    text-align:center;
+    font-family:sans-serif;
+    background-image: linear-gradient(to right,orange,rgb(231, 190, 7));
+    color:white;
+    position:relative;
+    padding-top:3%;
+}
+.modal-1-heading>span{
+    height: 58%;
+    width:9%;
+    background-color:white;
+    color:black;
+    border-radius:20px;
+    border-bottom:1px solid orange;
+    position:absolute;
+    right:5px;
+    cursor: pointer;
+}
+.modal-1-content>input{
+    text-align:center;
+    margin-top:2%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:13%;
+    width:80%;
+    outline:none;
+    font-size:1rem;
+    border: 1px solid black;
+}
+.modal-1-content >label{
+    font-size:1rem;
+    text-align:center;
+    font-weight: bold;
+    font-family:sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+}
+.modal-1-content > select{
+    border-radius:30px;
+    text-align:center;
+    margin-top:1%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:10%;
+    width:80%;
+    outline:none;
+    font-size:1rem;
+    border: 1px solid black;
+}
+.modal-1-content>button{
+    border-radius:20px;
+    background-image: linear-gradient(to right,rgb(77, 34, 94),blue);
+    color:white;
+    margin-top:5%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:10%;
+    width:40%;
+    font-size:1.2rem;
+    outline:none;
+}
+
+/* .................................book borrow modal box............................ */
+
+.modal-2{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    position:absolute;
+    background-color:rgba(0,0,0,0.9);
+    position: -webkit-sticky; /* Safari & IE */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+.modal-2-content{
+  width:60%;
+  height:70%;
+  border:1px solid black;
+  display:block;
+  margin-top:10%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:white;
+  
+}
+.modal-2-heading{
+  width:100%;
+  height:15%;
+  font-size:1.8rem;
+  text-align:center;
+  font-family:sans-serif;
+  background-image: linear-gradient(to right,orange,rgb(230, 188, 3));
+  color:white;
+  position:relative;
+ padding-top:2%;
+}
+.modal-2-heading>span{
+  height:55%;
+  width:4.5%;
+  background-color:white;
+  color:black;
+  border-radius:20px;
+  border-bottom:1px solid green;
+  position:absolute;
+  right:10px;
+  cursor: pointer;
+}
+.info{
+    height: 40%;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stu-details,.book-details{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stu-details>input ,.book-details>input{
+  text-align:center;
+  margin-top:8%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height:25%;
+  width: 100%;
+  border: 1px solid black;
+  outline:none;
+  font-size:1rem;
+}
+.modal-2-content>button{
+  border-radius:20px;
+  background-image: linear-gradient(to right,rgb(77, 34, 94),blue);
+  color:white;
+  margin-top:8%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height:10%;
+  width:40%;
+  font-size:1.2rem;
+  border:none;
+  outline:none;
+}
+
+/* .................................book return modal box............................ */
+
+.modal-3{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    position:absolute;
+    background-color:rgba(0,0,0,0.9);
+    position: -webkit-sticky; /* Safari & IE */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+.modal-3-content{
+  width:60%;
+  height:70%;
+  border:1px solid black;
+  display:block;
+  margin-top:10%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:white;
+  
+}
+.modal-3-heading{
+  width:100%;
+  height:15%;
+  font-size:1.8rem;
+  text-align:center;
+  font-family:sans-serif;
+  background-image: linear-gradient(to right,orange,rgb(231, 190, 6));
+  color:white;
+  position:relative;
+ padding-top:2%;
+}
+.modal-3-heading>span{
+  height:55%;
+  width:4.5%;
+  background-color:white;
+  color:black;
+  border-radius:20px;
+  border-bottom:1px solid green;
+  position:absolute;
+  right:10px;
+  cursor: pointer;
+}
+.info{
+    height: 40%;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stu-details,.book-details{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stu-details>input ,.book-details>input{
+  text-align:center;
+  margin-top:8%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height:25%;
+  width: 100%;
+  border: 1px solid black;
+  outline:none;
+  font-size:1rem;
+}
+.modal-3-content>button{
+  border-radius:20px;
+  background-image: linear-gradient(to right,rgb(77, 34, 94),blue);
+  color:white;
+  margin-top:8%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height:10%;
+  width:40%;
+  font-size:1.2rem;
+  border:none;
+  outline:none;
+}
+
+/* ................................. Status modal box............................ */
+
+.modal4{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    position:absolute;
+    background-color:rgba(0,0,0,0.9);
+    position: -webkit-sticky; /* Safari & IE */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+.modal4content{
+    width:60%;
+    height:70%;
+    border:1px solid black;
+    display:block;
+    margin-top:10%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+}
+.modal4heading{
+    width:100%;
+    height:15%;
+    font-size:1.8rem;
+    text-align:center;
+    font-family:sans-serif;
+    background-image: linear-gradient(to right,orange,rgb(255, 187, 0));
+    color:white;
+    position:relative;
+    padding-top:2%;
+}
+.modal4heading>span{
+    height:55%;
+    width:4.5%;
+    background-color:white;
+    color:black;
+    border-radius:20px;
+    border-bottom:1px solid green;
+    position:absolute;
+    right:10px;
+    cursor: pointer;
+}
+.modal4info{
+    height: 40%;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal4info > .stu-details,.status-book-details{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bksts-1,#bksts-6{
+    display: none;
+}
+.modal4info>.status-book-details{
+    display: none;
+}
+.modal4info>.stu-details>input ,.status-book-details>input{
+    text-align:center;
+    margin-top:8%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:25%;
+    width: 100%;
+    border: 1px solid black;
+    outline:none;
+    font-size:1.2rem;
+}
+.status-book-details>input{
+    font-weight: bold;
+    color: green;
+    background-image: linear-gradient(to right,rgb(240, 231, 231),rgba(161, 155, 155, 0.76));
+}
+.modal4content>button{
+    border-radius:20px;
+    background-image: linear-gradient(to right,rgb(77, 34, 94),blue);
+    color:white;
+    margin-top:8%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:10%;
+    width:40%;
+    font-size:1.2rem;
+    border:none;
+    outline:none;
+} 
+
+/*.............................footer...........................*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    border: 1px solid rgb(47, 45, 45);
+    margin-top:1%;
+    background-color: rgba(14, 13, 13, 0.801);
+}
+#about {
+    display: flex;
+    width: 40%;
+    height: 20%;
+    margin-top:1.2%;
+    padding-left: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#about li{
+    list-style: none;
+    padding-top: 1%;
+    margin-left: 4% ;
+    width: 20%;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: rgba(31, 29, 29, 0.849);
+    border-radius: 30px;
+    background-color: rgba(243, 239, 4, 0.842);
+}
+#about li:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.sm_site{
+    width: 40%;
+    height: 55%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    padding-top: 0.5%;
+    font-size: larger;
+    font-family: sans-serif;
+}
+#social_site{
+    display: flex;
+}
+#social_site li:nth-child(1){
+    margin-left: 14%;
+}
+#social_site>li{
+    border: 1px solid black;
+    border: none;
+    border-radius: 50%;
+    font-size:200%;
+    list-style: none;
+    margin-left: 6%;
+}
+.fab:hover{
+    font-size: 100%;
+    cursor: pointer;
+    color: white;
+
+}
+.sm_site p{
+    margin-top: 0.9%;
+}

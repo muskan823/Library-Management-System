@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="submain" id="sub1">
+            <div class="image"><img src="./asset/image/iiit.png" alt=""></div> 
+            <div class="heading">IIIT Bhubaneswar</div>
+            <div class="para">
+                Imagine, Innovate, Inspire
+
+
+            </div>
+        </div>
+
+        <div class="submain" id="sub2">
+            <div class="login-box">
+                <div class="user_login">
+                    <div class="login-box-heading">Login</div>
+                    <div class="auth">
+                        <div class="facebook"><i class="fab fa-facebook"></i></div>
+                        <div class="google"><i class="fab fa-google-plus"></i></div>
+                    </div>
+                    <div class="user_id_box">
+                        <div class="usr_id_logo"><i class="fas fa-user"></i></div>
+                        <input id="user" type="text" placeholder="user id / email">
+                    </div>
+
+                    <div class="user_pass_box">
+                        <div class="usr_pass_logo"><i class="fas fa-lock"></i></div>
+                        <input id="pass" type='password' placeholder="*****">
+                    </div>
+
+                    <button class="submit">Login</button>
+                    <div class="log-para">
+                        <p>Not register yet .<span>Sign Up</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+
+    $(".submit").click(function () {
+        let user_id = document.getElementById("user").value;
+        let password = document.getElementById("pass").value;
+
+        /*if (user == "admin") {
+            if (password == "admin") {
+                //$("body").load("html/index-2.html");
+                 window.location = './html/index2.php';
+            } else {
+                alert("incorect password");
+            };
+        } else {
+            alert("incorect User Id");
+        };*/
+
+        /*console.log(user_id);
+        console.log(password);
+
+        console.log(typeof user_id);
+        console.log(typeof password);*/
+
+        
+
+        $.post('./php/login.php',{
+            user_id :user_id,
+            pass:password
+        },function(data){
+            window.location = data;
+        })
+
+    });
+
+    
+</script>
+</body>
+
+</html>
